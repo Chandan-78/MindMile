@@ -27,7 +27,7 @@ document.getElementById("site-header").outerHTML = `
 document.getElementById("site-footer").outerHTML = `
 <footer class="footer"><div class="container">
   <div class="foot-grid">
-    <div><a class="logo" href="index.html" style="color:#fff"><img src="logo3.png" alt="Mind Mile Academy logo" class="logo-img">Mind Mile <span>Academy</span></a>
+    <div><a class="logo" href="index.html" style="color:#fff"><img src="logo4.png" alt="Mind Mile Academy logo" class="logo-img">Mind Mile <span>Academy</span></a>
       <p style="margin-top:14px">${SITE.tagline}. Entrance preparation for IOE, BE, B.Arch and CEE, plus Cambridge AS &amp; A Level.</p></div>
     <div><h3>Quick links</h3><ul>${pages.map(p=>`<li><a href="${p[0]}">${p[1]}</a></li>`).join("")}</ul></div>
     <div><h3>Contact</h3><ul>
