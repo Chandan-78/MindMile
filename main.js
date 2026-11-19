@@ -11,7 +11,7 @@ const SITE = {
   email: "Mindmileinstitute456@gmail.com" // TODO: replace with your real email
 };
 
-const pages = [["index.html","Home"],["courses.html","Courses"],["about.html","About"],["contact.html","Contact"]];
+const pages = [["index.html","Home"],["courses.html","Courses"],["resources.html","Resources"],["about.html","About"],["contact.html","Contact"]];
 const here = location.pathname.split("/").pop() || "index.html";
 const wa = (msg) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
 
