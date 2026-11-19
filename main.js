@@ -57,3 +57,45 @@ if (form) form.addEventListener("submit", e => {
   const d = new FormData(form);
   window.open(wa(`Hello Mind Mile Academy!\nName: ${d.get("name")}\nPhone: ${d.get("phone")}\nInterested in: ${d.get("course")}\nMessage: ${d.get("message")}`), "_blank");
 });
+/* ===== Welcome popup ===== */
+const POPUP = {
+  enabled: true,                 // set to false to switch it off
+  image: "popup.jpg",
+  alt: "Admission open at Mind Mile Academy",
+  link: "",                      // optional: e.g. "contact.html" makes the image clickable
+  seconds: 8,                    // auto-close time
+  onlyHome: true                 // true = show only on the home page
+};
+
+(function () {
+  if (!POPUP.enabled) return;
+  if (POPUP.onlyHome && here !== "index.html") return;
+  try { if (sessionStorage.getItem("popupSeen")) return; } catch (e) {}
+
+  const box = document.createElement("div");
+  box.className = "popup";
+  box.setAttribute("role", "dialog");
+  box.setAttribute("aria-label", POPUP.alt);
+  const img = `<img src="${POPUP.image}" alt="${POPUP.alt}">`;
+  box.innerHTML = `<div class="popup-card">
+    <button class="popup-x" aria-label="Close">&times;</button>
+    ${POPUP.link ? `<a href="${POPUP.link}">${img}</a>` : img}
+  </div>`;
+
+  let timer;
+  const close = () => {
+    clearTimeout(timer);
+    box.remove();
+    document.removeEventListener("keydown", onKey);
+    try { sessionStorage.setItem("popupSeen", "1"); } catch (e) {}
+  };
+  const onKey = e => { if (e.key === "Escape") close(); };
+
+  box.querySelector("img").addEventListener("error", () => box.remove());
+  box.querySelector(".popup-x").addEventListener("click", close);
+  box.addEventListener("click", e => { if (e.target === box) close(); });
+  document.addEventListener("keydown", onKey);
+
+  document.body.appendChild(box);
+  timer = setTimeout(close, POPUP.seconds * 1000);
+})();
