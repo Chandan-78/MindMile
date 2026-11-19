@@ -1,0 +1,14 @@
+/* Styles for resources.html only */
+.btn.sm{padding:9px 20px;font-size:.98rem}
+.notice,.result{background:#fff;border:1px solid var(--line);border-left:5px solid var(--red);border-radius:var(--radius);padding:24px 28px;margin-bottom:18px}
+.notice .date{color:var(--red);font-weight:600;font-size:1rem;margin-bottom:6px}
+.notice p{margin:6px 0 14px}
+.new{background:var(--red);color:#fff;border-radius:50px;padding:2px 12px;font-size:.85rem;margin-left:8px}
+.result{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.result .chip{background:var(--red-soft);color:var(--red);margin-bottom:6px}
+.result small{color:var(--text)}
+.filter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.filter button{padding:9px 22px;border-radius:50px;border:1.5px solid var(--line);background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+.filter button.on,.filter button:hover{background:var(--red);border-color:var(--red);color:#fff}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+@media(max-width:920px){.res-grid{grid-template-columns:1fr;gap:30px}}
