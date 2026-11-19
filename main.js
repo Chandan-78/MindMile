@@ -17,7 +17,7 @@ const wa = (msg) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(ms
 
 document.getElementById("site-header").outerHTML = `
 <header class="header"><div class="container nav">
-  <a class="logo" href="index.html" aria-label="${SITE.name} home"><img src="logo3.png" alt="Mind Mile Academy logo" class="logo-img">Mind Mile <span>Academy</span></a>
+  <a class="logo" href="index.html" aria-label="${SITE.name} home"><img src="logo4.png" alt="Mind Mile Academy logo" class="logo-img">Mind Mile <span>Academy</span></a>
   <button class="burger" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
   <nav class="menu" aria-label="Main">
     ${pages.map(p=>`<a href="${p[0]}" class="${p[0]===here?'active':''}">${p[1]}</a>`).join("")}
