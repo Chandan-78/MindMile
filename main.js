@@ -63,7 +63,7 @@ const POPUP = {
   image: "popup.jpg",
   alt: "Admission open at Mind Mile Academy",
   link: "",                      // optional: e.g. "contact.html" makes the image clickable
-  seconds: 8,                    // auto-close time
+  seconds: 5,                    // auto-close time
   onlyHome: true                 // true = show only on the home page
 };
 
