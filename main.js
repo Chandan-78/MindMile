@@ -59,7 +59,7 @@ if (form) form.addEventListener("submit", e => {
 });
 /* ===== Welcome popup ===== */
 const POPUP = {
-  enabled: true,                 // set to false to switch it off
+  enabled: false,                 // set to false to switch it off
   image: "popup.png",
   alt: "Admission open at Mind Mile Academy",
   link: "",                      // optional: e.g. "contact.html" makes the image clickable
